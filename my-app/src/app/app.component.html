@@ -1,0 +1,56 @@
+<table [class.table]="myClass" [style.font-family]="myStyle">
+  <tr>
+    <th [class.tableHeading]="myClass" [style.border]="style1" [attr.colspan]="cols">
+      Student Information
+    </th>
+  </tr>
+  <tr>
+    <th [class.header]="myClass" [style.border]="style2">Roll No.</th>
+    <th [class.header]="myClass" [style.border]="style2">Name</th>
+    <th [class.header]="myClass" [style.border]="style2">Subject</th>
+  </tr>
+  <tr [class.row]="myClass">
+    <td [class.tableData]="myClass" [style.border]="style2">1</td>
+    <td [class.tableData]="myClass" [style.border]="style2">Maahi</td>
+    <td [class.tableData]="myClass" [style.border]="style2">Maths</td>
+  </tr>
+  <tr [class.row]="myClass">
+    <td [class.tableData]="myClass" [style.border]="style2">2</td>
+    <td [class.tableData]="myClass" [style.border]="style2">Sweta</td>
+    <td [class.tableData]="myClass" [style.border]="style2">Science</td>
+  </tr>
+  <tr [class.row]="myClass">
+    <td [class.tableData]="myClass" [style.border]="style2">3</td>
+    <td [class.tableData]="myClass" [style.border]="style2">Nupur</td>
+    <td [class.tableData]="myClass" [style.border]="style2">English</td>
+  </tr>
+  <tr [class.row]="myClass">
+    <td [class.tableData]="myClass" [style.border]="style2">4</td>
+    <td [class.tableData]="myClass" [style.border]="style2">Diya</td>
+    <td [class.tableData]="myClass" [style.border]="style2">Social Studies</td>
+  </tr>
+</table>
+
+<form action="">
+  <div class="input-grp">
+    <label for="fname">FIRSTNAME:</label>
+    <input type="text" [(ngModel)]="data.fname" id="fname" name="fname" />
+  </div>
+  <div class="input-grp">
+    <label for="lname">LASTNAME:</label>
+    <input type="text" [(ngModel)]="data.lname" id="lname" name="lname" />
+  </div>
+  <div class="input-grp">
+    <label for="email-1">EMAIL:</label>
+    <input type="email" [(ngModel)]="data.email" name="email" id="email-1" />
+  </div>
+  <div class="input-grp">
+    <label for="address">ADDRESS:</label>
+    <input type="text" [(ngModel)]="data.address" name="address" id="address" />
+  </div>
+  <div class="input-grp">
+    <button class="submit-btn" type="submit" (click)="submitData()">
+      Submit
+    </button>
+  </div>
+</form>

@@ -1,0 +1,47 @@
+.table {
+  border: 1px solid gray;
+  width: 100%;
+  height: 100%;
+}
+.header {
+  padding: 10px;
+  background-color: rgb(230, 180, 190);
+}
+.tableData {
+  padding: 10px;
+  text-align: center;
+}
+.tableHeading {
+  padding: 15px;
+  font-size: 20px;
+  background-color: rgb(207, 81, 106);
+}
+.row:nth-child(even) {
+  background-color: rgb(230, 180, 190);
+}
+.row:nth-child(odd) {
+  background-color: rgb(230, 207, 212);
+}
+label {
+  font-family: sans-serif;
+}
+#fname,
+#lname,
+#email-1,
+#address {
+  border: 1px solid #ccc;
+  padding: 6px;
+  outline: 0;
+  border-radius: 3px;
+  margin-left: 10px;
+}
+.input-grp {
+  margin-top: 20px;
+}
+.submit-btn {
+  padding: 6px 12px;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  background-color: rgb(11, 81, 231);
+}
