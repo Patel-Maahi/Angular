@@ -1,0 +1,10 @@
+<div>
+  <label for="">Name</label>
+  <input type="text" (keyup)="0" #name>
+</div>
+<div>
+  <label for="">DOB</label>
+  <input type="text" (keyup)="0" #dob >
+</div>
+
+<app-child [name]="name.value" [dob]="dob.value" (callparentFunction)="parentFunction($event)" ></app-child>
