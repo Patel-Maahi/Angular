@@ -1,0 +1,41 @@
+<table>
+  <tr *ngFor="let item of employeeHeader">
+    <th>{{item.id}}</th>
+    <th>{{item.name}}</th>
+    <th>{{item.salary}}</th>
+    <th>{{item.action}}</th>
+  </tr>
+  <tr *ngFor="let item of employee">
+    <td>{{item.id}}</td>
+    <td>{{item.name}}</td>
+    <td>{{item.salary}}</td>
+    <td *ngIf="item.boolean"><button>Click Me</button></td>
+  </tr>
+</table>
+<h2>Days of the Week</h2>
+<div (change)="getDay($event)">
+<label for="sunday">Sunday</label>
+<input type="radio" name="days" id="sunday" value="sunday">
+<label for="monday">Monday</label>
+<input type="radio" name="days" id="monday" value="monday">
+<label for="tuesday">Tuesday</label>
+<input type="radio" name="days" id="tuesday" value="tuesday">
+<label for="wednesday">Wednesday</label>
+<input type="radio" name="days" id="wednesday" value="wednesday">
+<label for="thursday">Thursday</label>
+<input type="radio" name="days" id="thursday" value="thursday">
+<label for="friday">Friday</label>
+<input type="radio" name="days" id="friday" value="friday">
+<label for="saturday">Saturday</label>
+<input type="radio" name="days" id="saturday" value="saturday">
+</div>
+<div [ngSwitch]="selectedDay">
+  <p *ngSwitchCase="'sunday'">Sunday clears away the rust of the whole week</p>
+  <p *ngSwitchCase="'monday'">Mondays are the start of the work week which offer new beginnings 52 times a year!</p>
+  <p *ngSwitchCase="'tuesday'">Tuesday is a huge day</p>
+  <p *ngSwitchCase="'wednesday'">The road to a happy Wednesday goes through a productive Tuesday</p>
+  <p *ngSwitchCase="'thursday'">Thursday is the most dangerous day of the week</p>
+  <p *ngSwitchCase="'friday'">Friday afternoon feels like heaven</p>
+  <p *ngSwitchCase="'saturday'">Oh my sweet Saturday, I have been waiting for you for six long days</p>
+</div>
+<app-attr-directive></app-attr-directive>
