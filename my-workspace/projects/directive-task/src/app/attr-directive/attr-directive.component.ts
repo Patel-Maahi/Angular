@@ -11,7 +11,12 @@ export class AttrDirectiveComponent implements OnInit {
 
   ngOnInit(): void {
   }
-  myClass:boolean=false
+  myClass:boolean=false;
+  // multiClass={
+  //   color:true,
+  //   background-color:true,
+  //   font-size:true
+  // };
  
   
 }

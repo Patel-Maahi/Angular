@@ -1,0 +1,14 @@
+<input type="text" placeholder="search here.." [(ngModel)]="dataSearch" > <br>
+<table [style.border]="myStyle" [class.table]="myClass" >
+  <tr *ngFor="let item of studentHeader">
+    <th [style.border]="myStyle" >{{item.id}}</th>
+    <th [style.border]="myStyle" >{{item.name}}</th>
+    <th [style.border]="myStyle" >{{item.salary}}</th>
+    
+  </tr>
+  <tr *ngFor ="let data of student | customPipe: dataSearch " >
+    <td [style.border]="myStyle" >{{data.id}}</td>
+    <td [style.border]="myStyle" >{{data.name}}</td>
+    <td [style.border]="myStyle" >{{data.subject}}</td>
+  </tr>
+</table>
