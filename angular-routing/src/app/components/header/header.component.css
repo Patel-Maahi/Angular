@@ -1,0 +1,24 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header{
+    padding: 20px;
+   background-color: black;
+}
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly
+}
+a{
+    font-size: 20px;
+    font-weight: 700;
+    color: white;
+    text-decoration: none;
+}
+a.active{
+    color: aqua;
+}

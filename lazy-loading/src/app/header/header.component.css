@@ -1,0 +1,21 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.navbar{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.links{
+    text-decoration: none;
+    color: rgb(70, 66, 66);
+}
+.header{
+    background-color: pink;
+    padding: 20px;
+}
+.active{
+    color: green;
+}

@@ -1,0 +1,6 @@
+<h1>Products Page</h1>
+<div>
+    <ul *ngFor="let item of product" class="product-ul">
+        <li ><a class="product-list" routerLink="/product-details/{{item.id}}">{{item.name}}</a></li>
+    </ul>
+</div>
