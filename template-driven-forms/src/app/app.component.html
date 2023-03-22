@@ -1,0 +1,39 @@
+<div class="main-container">
+  
+<div class="container">
+  <h1>Course Enrollment</h1>
+  <form #userForm="ngForm">
+   
+    <div class="form-group">
+      <label for="name">Name</label>
+      <input type="text" #name="ngModel" class="form-control form-inputs" [class.is-invalid]="name.invalid && name.touched" id="name" name="name" ngModel required>
+    </div>
+    <span class="text-danger" [class.d-none]="name.valid||name.untouched" >Name is required</span>
+    
+    <div class="form-group">
+      <label for="email">Email</label>
+      <input type="email" #email="ngModel" class="form-control form-inputs" [class.is-invalid]="email.invalid && email.touched" id="email" name="email" ngModel pattern="^[a-zA-Z0-9+_.-]+@[a-zA-Z0-9.-]+$" required>
+      <div *ngIf="email.errors && (!email.invalid||email.touched)">
+        <span class="text-danger " *ngIf="email.errors['required']">Email is required</span>
+        <span class="text-danger" *ngIf="email.errors['pattern']">Enter valid email</span>
+      </div>
+    </div>
+    <div class="form-group-1">
+      <select required #topic="ngModel" [class.is-invalid]="topic.invalid && topic.touched" name="topics" id="" class="form-control" ngModel>
+        <option value="">I am Interested in</option>
+        <option value="{{item}}" *ngFor="let item of topics">{{item}}</option>
+      </select>
+      <div class="text-danger" [class.d-none]="topic.valid||topic.untouched" >Please choose a topic</div>
+    </div>
+    <div class="form-group-2">
+      <input type="checkbox" class="form-control" id="conditions" name="conditions" ngModel>
+      <label for="conditions">I have read all the terms and conditions</label>
+      
+    </div>
+    <div class="form-group">
+      <button [disabled]="userForm.form.invalid" type="submit" class="submit-btn">Submit</button>
+    </div>
+
+  </form>
+</div>
+</div>

@@ -1,7 +1,14 @@
 <a routerLink="product-list" >Product List</a>
 
-
-
+<table border="1">
+    <tbody>
+        <tr *ngFor="let i of newData">
+            <td>{{i.id}}</td>
+            <td>{{i.name}}</td>
+        </tr>
+    </tbody>
+</table>
+<div *ngFor="let i of btnArr"><button (click)="showData($event)" value={{i}}>{{i}}</button></div>
 
 
 <router-outlet></router-outlet>
