@@ -2,7 +2,7 @@
   
 <div class="container">
   <h1>Course Enrollment</h1>
-  <form #userForm="ngForm">
+  <form #userForm="ngForm" (ngSubmit)="onSubmit(userForm)">
    
     <div class="form-group">
       <label for="name">Name</label>

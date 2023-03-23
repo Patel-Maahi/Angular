@@ -1,0 +1,58 @@
+<form [formGroup]="reactiveForm" (ngSubmit)="onSubmit()">
+  <div class="mb-3">
+    <label for="exampleInputFname" class="form-label">First Name</label>
+    <input type="text" class="form-control" id="exampleInputFname" formControlName="firtsname" >
+    <div class="text-danger" *ngIf="!reactiveForm.get('firtsname')?.valid && reactiveForm.get('firtsname')?.touched">Firstname is required</div>
+  </div>
+  <div class="mb-3">
+    <label for="exampleInputLname" class="form-label">Last Name</label>
+    <input type="text" class="form-control" id="exampleInputLname" formControlName="lastname">
+    <div class="text-danger" *ngIf="!reactiveForm.get('lastname')?.valid && reactiveForm.get('lastname')?.touched">Lasttname is required</div>
+  </div>
+  <div class="mb-3">
+    <label for="exampleInputEmail1" class="form-label">Email address</label>
+    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" formControlName="email">
+    <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+    <div class="text-danger" *ngIf="!reactiveForm.get('email')?.valid && reactiveForm.get('email')?.touched &&reactiveForm.get('email')?.errors?.['required']">Email is required</div>
+    <div class="text-danger" *ngIf="!reactiveForm.get('email')?.valid &&  reactiveForm.get('email')?.touched&& reactiveForm.get('email')?.errors?.['pattern']">Email is invalid</div>
+  </div>
+  <select class="form-select" aria-label="Default select example" formControlName="country">
+    <option value="" selected>Country</option>
+    <option value="India">India</option>
+    <option value="USA">USA</option>
+    <option value="Canada">Canada</option>
+  </select>
+  <label for="">Gender</label>
+  <div class="form-check">
+    <input class="form-check-input" type="radio" name="male" id="male" formControlName="gender" value="male">
+    <label class="form-check-label" for="male">
+      Male
+    </label>
+  </div>
+  <div class="form-check">
+    <input class="form-check-input" type="radio" name="male" id="female"  formControlName="gender" value="female">
+    <label class="form-check-label" for="female">
+      Female
+    </label>
+  </div>
+  <label for="">Hobbies (Optional)</label>
+  <div class="form-check">
+    <input class="form-check-input" type="checkbox" value="" id="sports" formControlName="hobbies">
+    <label class="form-check-label" for="sports">
+      Sports
+    </label>
+  </div>
+  <div class="form-check">
+    <input class="form-check-input" type="checkbox" value="" id="dance"  formControlName="hobbies">
+    <label class="form-check-label" for="dance">
+      Dance
+    </label>
+  </div>
+  <div class="form-check">
+    <input class="form-check-input" type="checkbox" value="" id="music"  formControlName="hobbies">
+    <label class="form-check-label" for="music">
+      Music
+    </label>
+  </div>
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form>
