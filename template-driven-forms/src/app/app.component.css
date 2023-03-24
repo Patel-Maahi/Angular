@@ -45,13 +45,13 @@ h1{
 #conditions{
     margin-right: 5px;
 }
-.submit-btn{
-    background-color:rgb(31, 31, 224);
+ .btn{
+    background-color:rgb(14, 83, 45);
     border: none;
     border-radius: 3px;
     padding: 6px 12px;
     color: white;
-}
+} 
 .is-invalid{
     border: 1px solid red;
 }
@@ -61,4 +61,8 @@ h1{
 .text-danger{
     color: red;
     font-size: 12px;
+}
+.submit-btn:disabled{
+    opacity: 0.6;
+
 }

@@ -31,9 +31,21 @@
       
     </div>
     <div class="form-group">
-      <button [disabled]="userForm.form.invalid" type="submit" class="submit-btn">Submit</button>
+      <button [disabled]="userForm.form.invalid" type="submit" class="btn submit-btn">Submit</button> 
+     
     </div>
+    <div class="form-group">
+    <button type="button" class="btn" (click)="setDefaultValues()">SetDefaultValues</button>
+  </div>
 
   </form>
 </div>
+</div>
+
+<div class="form-data">
+  <h2>Course Enrollment</h2>
+  <p>Name:</p>
+  <p>Email:</p>
+  <p>Topic:</p>
+
 </div>
