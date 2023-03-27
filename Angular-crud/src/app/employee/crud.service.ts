@@ -19,7 +19,7 @@ public data = [{id:1,name:"Maahi",salary:5000,technology:'Angular',email:'maahi@
   
   constructor() { }
 public returnData:any
-public deleteEmp:any 
+public deleteEmp:any   
 getData(){
   if(localStorage.length==0){
     localStorage.setItem("name",JSON.stringify(this.data))
