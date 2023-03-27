@@ -1,0 +1,36 @@
+<form [formGroup]="empForm" (ngSubmit)="submit()">
+    <div class="mb-3">
+        <label for="exampleInputName" class="form-label">Name</label>
+        <input type="email" class="form-control" id="exampleInputName" aria-describedby="NameHelp" formControlName="name">
+      </div>
+      <div class="mb-3">
+        <label for="exampleInputSalary" class="form-label">Salary</label>
+        <input type="text" class="form-control" id="exampleInputSalary" aria-describedby="SalaryHelp" formControlName="salary">
+      </div>
+      <div class="mb-3">
+    <select class="form-select" aria-label="Default select example" formControlName="technology">
+        <option selected>Technology</option>
+        <option value="angular">Angular</option>
+        <option value="react">React</option>
+        <option value="vue">Vue</option>
+      </select>
+    </div>
+    <div class="mb-3">
+      <label for="exampleInputEmail1" class="form-label">Email address</label>
+      <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" formControlName="email">
+      
+    </div>
+    <div class="mb-3">
+      <label for="exampleInputPassword1" class="form-label">Password</label>
+      <input type="password" class="form-control" id="exampleInputPassword1" formControlName="password">
+    </div>
+    <div class="mb-3">
+        <label for="exampleInputPassword1" class="form-label">Confirm Password</label>
+        <input type="password" class="form-control" id="exampleInputPassword1" formControlName="confirmpassword">
+      </div>
+    <div class="mb-3 form-check">
+      <input type="checkbox" class="form-check-input" id="exampleCheck1">
+      <label class="form-check-label" for="exampleCheck1">Check me out</label>
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>

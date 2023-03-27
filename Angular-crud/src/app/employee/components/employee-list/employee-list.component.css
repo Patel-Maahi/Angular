@@ -1,0 +1,20 @@
+th{
+    background-color: green;
+    padding: 10px;
+    color: white;
+}
+table{
+    width: 100%;
+}
+td{
+    padding: 10px;
+}
+tr:nth-child(even){
+    background-color: rgb(231, 216, 219);
+}
+.del-btn{
+    border: none;
+    border-radius: 3px;
+    background-color: rgb(243, 165, 178);
+    padding: 6px 12px;
+}
