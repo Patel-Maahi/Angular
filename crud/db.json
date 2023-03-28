@@ -1,0 +1,44 @@
+{
+  "student": [
+    {
+      "id": 1,
+      "name": "Maahi",
+      "email": "maahi@gmail.com",
+      "subject": "Maths",
+      "percentage": "79%",
+      "activity": "Dance"
+    },
+    {
+      "name": "xcxv",
+      "email": "abc",
+      "subject": "dfg",
+      "percentage": "hfh",
+      "activity": "singing",
+      "id": 2
+    },
+    {
+      "name": "xcxv",
+      "email": "abc",
+      "subject": "dfg",
+      "percentage": "hfh",
+      "activity": "singing",
+      "id": 3
+    },
+    {
+      "name": "xcxv",
+      "email": "gfgbfj",
+      "subject": "dfg",
+      "percentage": "hfh",
+      "activity": "dance",
+      "id": 4
+    },
+    {
+      "name": "xcxv",
+      "email": "abc",
+      "subject": "dfg",
+      "percentage": "hfh",
+      "activity": "dance",
+      "id": 5
+    }
+  ]
+}

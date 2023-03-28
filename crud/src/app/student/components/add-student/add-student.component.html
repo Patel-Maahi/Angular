@@ -1,0 +1,30 @@
+<form [formGroup]="studentForm" (ngSubmit)="getStudentFormData(studentForm.value)" >
+    <div class="mb-3">
+      <label for="exampleInputName" class="form-label">Name</label>
+      <input type="text" class="form-control" id="exampleInputName" aria-describedby="nameHelp" formControlName="name" [(ngModel)]="editData.name">
+    </div>
+    <div class="mb-3">
+        <label for="exampleInputEmail1" class="form-label">Email address</label>
+        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" formControlName="email">
+      </div>
+      <div class="mb-3">
+        <label for="exampleInputSubject" class="form-label">Subject</label>
+        <input type="text" class="form-control" id="exampleInputSubject" aria-describedby="subjectHelp" formControlName="subject">
+      </div>
+      <div class="mb-3">
+        <label for="exampleInputPercentage" class="form-label">Percentage</label>
+        <input type="text" class="form-control" id="exampleInputPercentage" aria-describedby="percentageHelp" formControlName="percentage">
+      </div>
+      <div class="mb-3">
+      <select class="form-select" aria-label="Default select example" formControlName="activity">
+        <option selected>Activity</option>
+        <option value="dance">Dance</option>
+        <option value="singing">Singing</option>
+        <option value="sports">Sports</option>
+      </select>
+    </div>
+
+    
+    
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
