@@ -22,7 +22,7 @@ export class AddStudentComponent implements OnInit {
       email:new FormControl("",Validators.required),
       subject: new FormControl("",Validators.required),
       percentage: new FormControl("",Validators.required),
-      activity: new FormControl("",Validators.required)
+      activity: new FormControl("activity",Validators.required)
     })
   }
   getStudentFormData(data:any){
@@ -31,5 +31,9 @@ export class AddStudentComponent implements OnInit {
     this.studentService.getData().subscribe((res)=>
     this.data=res)
     
+  }
+  receiveData(data: any){
+console.log(data);
+
   }
 }

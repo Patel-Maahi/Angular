@@ -1,7 +1,7 @@
 <form [formGroup]="studentForm" (ngSubmit)="getStudentFormData(studentForm.value)" >
     <div class="mb-3">
       <label for="exampleInputName" class="form-label">Name</label>
-      <input type="text" class="form-control" id="exampleInputName" aria-describedby="nameHelp" formControlName="name" [(ngModel)]="editData.name">
+      <input type="text" class="form-control" id="exampleInputName" aria-describedby="nameHelp" formControlName="name" >
     </div>
     <div class="mb-3">
         <label for="exampleInputEmail1" class="form-label">Email address</label>
@@ -17,7 +17,7 @@
       </div>
       <div class="mb-3">
       <select class="form-select" aria-label="Default select example" formControlName="activity">
-        <option selected>Activity</option>
+        <option value="activity">Activity</option>
         <option value="dance">Dance</option>
         <option value="singing">Singing</option>
         <option value="sports">Sports</option>

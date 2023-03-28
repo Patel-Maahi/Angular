@@ -1,5 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+
 import { StudentService } from '../../student.service';
 
 @Component({
@@ -11,7 +11,7 @@ export class StudentListComponent implements OnInit {
   data: any;
   editData: Object | undefined;
 
-  constructor(private studentService :StudentService, private route:ActivatedRoute ) { }
+  constructor(private studentService :StudentService ) { }
 
   ngOnInit(): void {
     this.studentService.getData().subscribe((res)=>
@@ -22,10 +22,13 @@ export class StudentListComponent implements OnInit {
    this.studentService.getData().subscribe((res)=>
    this.data=res)
   }
+  @Output()
+  sendEditData = new EventEmitter();
   updateStudent(id:number){
-    let studentId = this.route.snapshot.paramMap.get
     this.studentService.getDataById(id).subscribe((res)=>
     this.editData = res
     )
+    this.sendEditData.emit(this.editData)
   }
-}
+  }
+
