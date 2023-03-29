@@ -1,0 +1,41 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html,body{
+    height: 100%;
+    width: 100%;
+}
+.table{
+    width: 100%;
+    margin-top: 30px;
+}
+td{
+    padding: 10px;
+}
+th{
+    padding: 20px;
+    background-color: rgb(136, 214, 162);
+}
+.btn{
+    border: none;
+    border-radius: 3px;
+    color: white;
+    padding: 6px 12px;
+}
+.add-btn{
+    background-color: rgb(228, 115, 134);
+    margin-top: 20px;
+    margin-left: 20px;
+}
+.delete-btn{
+margin-left: 10px;
+background-color: rgb(17, 97, 17);
+}
+.edit-btn{
+    background-color: rgb(230, 57, 57);
+}
+tr:nth-child(even){
+    background-color: rgb(233, 222, 224);
+}
