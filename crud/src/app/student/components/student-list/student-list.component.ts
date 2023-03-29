@@ -24,11 +24,11 @@ export class StudentListComponent implements OnInit {
   }
   @Output()
   sendEditData = new EventEmitter();
-  updateStudent(id:number){
-    this.studentService.getDataById(id).subscribe((res)=>
-    this.editData = res
-    )
-    this.sendEditData.emit(this.editData)
-  }
-  }
-
+  // updateStudent(id:number){
+  //   this.studentService.getDataById(id).subscribe((res)=>
+  //   this.editData = res
+  //   )
+  //   this.sendEditData.emit(this.editData)
+  // }
+  // }
+}

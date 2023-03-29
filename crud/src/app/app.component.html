@@ -1,2 +1,2 @@
-<app-add-student></app-add-student>
-<app-student-list></app-student-list>
+<app-add-student [name]="name" [email]="email" [subject]="subject" [percentage]="percentage" [activity]="activity" [id]='id'></app-add-student>
+<app-student-list (sendEditData)="sendEditData($event)" ></app-student-list>

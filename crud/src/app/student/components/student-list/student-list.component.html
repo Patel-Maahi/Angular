@@ -17,7 +17,7 @@
             <td>{{item.percentage}}</td>
             <td>{{item.activity}}</td>
             <td><button (click)="deleteStudent(item.id)" >Delete</button></td>
-            <td><button (click)="updateStudent(item.id)" >Edit</button></td>
+            <td><button (click)="sendEditData.emit({name:item.name,email:item.email,subject:item.subject,percentage:item.percentage,activity:item.activity,id:item.id})" >Edit</button></td>
         </tr>
     </Tbody>
 </table>
