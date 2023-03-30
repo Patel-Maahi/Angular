@@ -25,7 +25,16 @@ export class AddStudentComponent implements OnInit ,OnChanges{
    
   }
   ngOnChanges(changes: SimpleChanges): void {
-    console.log(this.name);
+    if(this.id!=undefined){
+      this.studentForm.setValue({
+        "name":this.name,
+        "email":this.email,
+        "subject":this.subject,
+        "percentage":this.percentage,
+        "activity":this.activity,
+        
+      })
+    }
   }
 
   ngOnInit(): void {
@@ -49,9 +58,7 @@ export class AddStudentComponent implements OnInit ,OnChanges{
     this.data=res)
     
   }
-  receiveData(data: any){
+  receiveData(data:any){
 console.log(data);
   }
- 
-  
 }
