@@ -1,0 +1,17 @@
+<form>
+  <label for="">Name</label>
+  <input type="text" #name >,<br>
+  <label for="">Lastname</label>
+  <input type="text" #lastname ><br>
+  <select #topics >
+  <option value="topics">Topics</option>
+  <option value="angular">Angular</option>
+  <option value="react">React</option>
+  <option value="vue">Vue</option>
+</select>
+  <button type="submit" (click)="passValue(name.value, lastname.value, topics.value )" >Submit</button>
+
+</form>
+
+
+<app-child [firstname]="name" [lastname]="lastname" [topics]="topics" ></app-child>
