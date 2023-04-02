@@ -1,0 +1,5 @@
+<label for="">Food</label>
+<input type="text" (keyup.enter)="addFood(foodItem.value)" #foodItem>
+
+<app-child  [foodArr]="foods"  (foodDel)="removeFood($event)" ></app-child>
+<p *ngIf="removedFood" >Removed Food : {{removedFood}}</p>
