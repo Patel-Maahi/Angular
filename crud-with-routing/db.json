@@ -1,60 +1,44 @@
 {
   "customer": [
     {
-      "name": "xcxv",
-      "email": "abc",
-      "address": "dfg",
-      "contact": "hfh",
+      "name": "Maahi",
+      "email": "maahi@gmail.com",
+      "address": "Valsad",
+      "contact": "+919328509591",
+      "productQuantity": "20",
       "id": 1
     },
     {
-      "name": "xcxv",
-      "email": "abc",
-      "address": "dfg",
-      "contact": "hfh",
+      "name": "Sweta",
+      "email": "sweta@gmail.com",
+      "address": "Valsad",
+      "contact": "+919328509591",
+      "productQuantity": "68",
       "id": 2
     },
     {
-      "name": "xcxv",
-      "email": "cxvcbhn vmj",
-      "address": ",n,. n/.jnm",
-      "contact": "cgbxhbcfjh",
+      "name": "Raj",
+      "email": "raj@gmail.com",
+      "address": "Vapi",
+      "contact": "+919328509591",
+      "productQuantity": "45",
       "id": 3
     },
     {
-      "name": "xcxv",
-      "email": "cxvcbhn vmj",
-      "address": ",n,. n/.jnm",
-      "contact": "cgbxhbcfjh",
+      "name": "Nupur",
+      "email": "nupur@gmail.com",
+      "address": "Udvada",
+      "contact": "+919328509591",
+      "productQuantity": "76",
       "id": 4
     },
     {
-      "name": "xcxv",
-      "email": "gfgbfj",
-      "address": "dfg",
-      "contact": "hfh",
+      "name": "Diya",
+      "email": "diya@gmail.com",
+      "address": "Vapi",
+      "contact": "+919328509591",
+      "productQuantity": "40",
       "id": 5
-    },
-    {
-      "name": "xcxv",
-      "email": "gfgbfj",
-      "address": "dfg",
-      "contact": "hfh",
-      "id": 6
-    },
-    {
-      "name": "xcxv",
-      "email": "gfgbfj",
-      "address": "dfg",
-      "contact": "hfhvfcgfggvcfgb ",
-      "id": 7
-    },
-    {
-      "name": "xcxv",
-      "email": "gfgbfj",
-      "address": "dfg",
-      "contact": "hfh",
-      "id": 8
     }
   ]
 }

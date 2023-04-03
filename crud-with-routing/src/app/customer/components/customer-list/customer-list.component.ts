@@ -8,9 +8,11 @@ import { CustomerService } from '../../customer.service';
   styleUrls: ['./customer-list.component.css']
 })
 export class CustomerListComponent implements OnInit {
-  customerData: any | undefined;
+  customerData: any | undefined = []
   editdata: Object | undefined;
   myid: any;
+  name: any;
+  address:any
 
   constructor(private customerService : CustomerService , private route : Router ) { }
 
@@ -29,4 +31,31 @@ export class CustomerListComponent implements OnInit {
   editData(id:any){
     this.route.navigate(['add-customer',id])
   }
+  search(){
+    if(this.name==""){
+      this.ngOnInit();
+    }
+    else{
+      this.customerData = this.customerData.filter((res: { name: string; })=>{
+        return res.name.toLowerCase().match(this.name.toLowerCase())
+      })
+    }
+  }
+   filterCustomer(evt: any){
+    //  this.customerData = this.customerData.filter((res: { address: { value: any; }; })=>{
+    //    return res.address.value == this.address.value
+
+    //  })
+
+    console.log(evt.target.value);
+    
+  
+  
+   }
+   sortCustomer(){
+    this.customerData = this.customerData.sort((a: any,b: any)=>{return (a.id-b.id)})
+    console.log(this.customerData);
+    
+   }
+
 }

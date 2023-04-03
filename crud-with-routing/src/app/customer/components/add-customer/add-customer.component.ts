@@ -22,7 +22,8 @@ customerForm: any;
       name: new FormControl(""),
       email:new FormControl(""),
       address: new FormControl(""),
-      contact: new FormControl("")
+      contact: new FormControl(""),
+      productQuantity:new FormControl("")
     })
     this.editDataId = this.routes.snapshot.paramMap.get('id')
     if (this.editDataId != "") {
@@ -30,7 +31,8 @@ customerForm: any;
         name:this.editdata.name,
         email:this.editdata.email,
         address:this.editdata.address,
-        contact:this.editdata.contact
+        contact:this.editdata.contact,
+        productQuantity:this.editDataId.productQuantity
       })})
       this.changeBtn=true;
     }

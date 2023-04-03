@@ -1,5 +1,19 @@
 
 <button class="btn add-btn" (click)="addCustomer()" >Add Customer</button>
+<div class="search">
+    <input type="text" name="name" [(ngModel)]="name" (ngModelChange)="search()" placeholder="Enter name to search">
+</div>
+<div>
+    <select name="address"  [(ngModel)]="address" id="" (Change)="filterCustomer($event)" >
+        
+            
+        <option  *ngFor="let add of customerData.address" >{{add.address}}</option>
+        
+        <!-- <option >Address</option> -->
+        <!-- <option [value]="vapi">Vapi</option> -->
+        <!-- <option [value]="udvada">Udvada</option> -->
+    </select>
+</div>
 <table class="table">
     <thead>
         <tr>
@@ -8,6 +22,7 @@
             <th>EMAIL</th>
             <th>ADDRESS</th>
             <th>CONTACT</th>
+            <th (click)="sortCustomer()" >PRODUCT QUANTITY</th>
             <th>ACTION</th>
         </tr>
     </thead>
@@ -18,6 +33,7 @@
             <td>{{data.email}}</td>
             <td>{{data.address}}</td>
             <td>{{data.contact}}</td>
+            <td   >{{data.productQuantity}}</td>
             <td>
                 <button class="btn edit-btn" (click)="editData(data.id)" >Edit</button>
                 <button class="btn delete-btn" (click)="deleteCustomer(data.id)" >Delete</button>

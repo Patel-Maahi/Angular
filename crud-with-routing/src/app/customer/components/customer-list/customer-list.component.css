@@ -37,5 +37,9 @@ background-color: rgb(17, 97, 17);
     background-color: rgb(230, 57, 57);
 }
 tr:nth-child(even){
-    background-color: rgb(233, 222, 224);
+    background-color: rgb(193, 186, 187);
+}
+.search{
+    margin-top: 20px;
+    margin-left: 20px;
 }
