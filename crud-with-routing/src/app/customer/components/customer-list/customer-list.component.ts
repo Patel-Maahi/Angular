@@ -13,10 +13,17 @@ export class CustomerListComponent implements OnInit {
   myid: any;
   name: any;
   address:any
+  selectAddress:any[] | undefined  
+  filteredData: any = '';
 
   constructor(private customerService : CustomerService , private route : Router ) { }
 
   ngOnInit(): void {
+    this.selectAddress=[ {value:'address', Name:'Address'},
+    {value:'vapi', Name:'Vapi'},
+    {value:'valsad', Name:'Valsad'},
+    {value:'udvada', Name:'Udvada'}
+      ]
     this.customerService.getData().subscribe((res)=>
      this.customerData=res)
   }
@@ -41,19 +48,18 @@ export class CustomerListComponent implements OnInit {
       })
     }
   }
-   filterCustomer(evt: any){
-    //  this.customerData = this.customerData.filter((res: { address: { value: any; }; })=>{
-    //    return res.address.value == this.address.value
-
-    //  })
-
-    console.log(evt.target.value);
+   filterCustomer(event: any){
+    this.filteredData = event.target.value
+     this.customerData = this.customerData.filter((res: { address: { value: any; }; })=>{ return  res.address==this.filteredData||this.filteredData=='address'},
+      console.log(this.customerData)
+      
+     )
+    console.log();
     
-  
-  
+    
    }
    sortCustomer(){
-    this.customerData = this.customerData.sort((a: any,b: any)=>{return (a.id-b.id)})
+    this.customerData = this.customerData.sort((a: any,b: any)=>{return(a.productQuantity-b.productQuantity)})
     console.log(this.customerData);
     
    }
