@@ -1,0 +1,30 @@
+<button type="button" class="btn btn-primary" (click)="openForm()" >Add Employee</button>
+
+    <table class="table w-100"  >
+        <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">FIRSTNAME</th>
+            <th scope="col">LASTNAME</th>
+            <th scope="col">EMAIL</th>
+            <th scope="col">ADDRESS</th>
+            <th scope="col">SALARY</th>
+            <th scope="col">ACTION</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let data of employeeData" >
+            <td scope="row">{{data.id}}</td>
+            <td>{{data.firstname}}</td>
+            <td>{{data.lastname}}</td>
+            <td>{{data.email}}</td>
+            <td>{{data.address}}</td>
+            <td>{{data.salary}}</td>
+            <td><button (click)="editEmployee(data.id)"  >Edit</button>
+            <button (click)="deleteEmployee(data.id)" >Delete</button>
+            </td>
+          </tr>
+          
+        </tbody>
+      </table>
+

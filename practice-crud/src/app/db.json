@@ -1,0 +1,52 @@
+{
+  "employee": [
+    {
+      "id": 1,
+      "firstname": "Maahi",
+      "lastname": "Patel",
+      "email": "maahi@gmail.com",
+      "address": "valsad",
+      "salary": "5000"
+    },
+    {
+      "id": 2,
+      "firstname": "Maahi",
+      "lastname": "Patel",
+      "email": "maahi@gmail.com",
+      "address": "valsad",
+      "salary": "5000"
+    },
+    {
+      "firstname": "hgfch",
+      "lastname": "jffgj",
+      "address": "gjjk",
+      "email": "gjjg",
+      "salary": "65768",
+      "id": 3
+    },
+    {
+      "firstname": "dsd",
+      "lastname": "sdds",
+      "address": "sfs",
+      "email": "sd",
+      "salary": "sff",
+      "id": 4
+    },
+    {
+      "firstname": "maahiiii",
+      "lastname": "hgvbhnjgb",
+      "address": "jmbvm",
+      "email": "jbgngbjm",
+      "salary": "4678",
+      "id": 5
+    },
+    {
+      "firstname": "maahiiii",
+      "lastname": "hgvbhnjgb",
+      "address": "jmbvmdcgbfvbcf nvc nvbn vb",
+      "email": "jbgngbjmvchngv",
+      "salary": "jmbvmdcgbfvbcf nvc nvbn vb",
+      "id": 6
+    }
+  ]
+}

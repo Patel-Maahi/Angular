@@ -1,0 +1,27 @@
+<form [formGroup]="employeeForm" (ngSubmit)="changeBtn? updateFormData() :addFormData()" >
+    <div class="form-row">
+        <div class="form-group col-md-6">
+            <label for="inputfname4">FirstName</label>
+            <input type="text" class="form-control" id="inputfname4" placeholder="Firstname" formControlName="firstname" >
+          </div>
+          <div class="form-group col-md-6">
+            <label for="inputlname4">LastName</label>
+            <input type="text" class="form-control" id="inputlname4" placeholder="Lastname" formControlName="lastname" >
+          </div>
+      <div class="form-group col-md-6">
+        <label for="inputEmail4">Email</label>
+        <input type="email" class="form-control" id="inputEmail4" placeholder="Email" formControlName="email" >
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="inputAddress">Address</label>
+      <input type="text" class="form-control" id="inputAddress" placeholder="" formControlName="address" >
+    </div>
+    <div class="form-group col-md-6">
+        <label for="inputfname4">Salary</label>
+        <input type="text" class="form-control" id="inputsalary4" placeholder="Salary" formControlName="salary" >
+      </div>
+    
+    <button type="submit" class="btn btn-primary">{{changeBtn?'Update':'Submit'}}</button>
+    <button type="button" class="btn btn-primary" (click)="closeForm()" >Cancel</button>
+  </form>

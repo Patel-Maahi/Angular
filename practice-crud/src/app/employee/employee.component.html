@@ -1,0 +1,2 @@
+<app-add-employee *ngIf="isFormVisible"  (closeFormEvt)="formNotVisible($event)"  (addEmployee)="addEmployeeData($event)" [editData]="editData" (updateEmployee)="updateEmployeeData($event)" ></app-add-employee>
+<app-employee-list  (openFormEvent)="formVisible($event)"  [employeeData]="employeeData"   (deleteDataEvt)="deleteEmployeeData($event)" (editDataEvt)="getEditEmployeeData($event)" ></app-employee-list>
